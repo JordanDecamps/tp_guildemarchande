@@ -4,11 +4,11 @@ public class Main {
     public static void main(String[] args) {
         Produit[] produits = new Produit[5];
 
-        produits[0] = new Produit("Licence Copilot", false, 10, 12);
+        produits[0] = new ProduitEphemere("Licence Copilot", 10, 12);
         produits[1] = new Produit("Ordinateur Quantique", false, 5000, 19);
-        produits[2] = new Produit("Ordinateur EdN", true, 100, 7);
-        produits[3] = new Produit("Souris EdN", true, 20, 3);
-        produits[4] = new Produit("Disque Dur 2To", false, 100, 42);
+        produits[2] = new ProduitCollector("Ordinateur EdN", 100, 7);
+        produits[3] = new ProduitCollector("Souris EdN", 20, 3);
+        produits[4] = new ProduitNormal("Disque Dur 2To", 100, 42);
 
         StockGuildeMarchande stock = new StockGuildeMarchande(produits);
 
